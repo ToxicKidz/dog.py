@@ -1,0 +1,1 @@
+An API wrapper for [`thedogapi`](https://thedogapi.com/) that covers the full API.
