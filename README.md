@@ -6,8 +6,7 @@ pip install -U dog.py
 ```
 
 Here's an example for getting an image and printing its url:
-
-```
+```py
 from dog import Client
 
 client = Client('my_api_key_here')
