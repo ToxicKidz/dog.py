@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "dog.py"
-version = "0.1.0"
+version = "0.2.0"
 description = "An API wrapper for https://thedogapi.com/ that covers the full API."
 authors = ["ToxicKidz <78174417+ToxicKidz@users.noreply.github.com>"]
 license = "MIT"
