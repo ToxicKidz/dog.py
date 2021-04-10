@@ -53,7 +53,7 @@ class Model(BaseObject):
         self.id = id
 
     @classmethod
-    def _from_data(self, client, data: Dict[str, Any]) -> Model:
+    def _from_data(cls, client, data: Dict[str, Any]) -> Model:
         self = super()._from_data(data)
         self._client = client
         return self
@@ -165,9 +165,9 @@ class PartialImage(Model):
         self.url = url
         self.categories = self.breeds = None
         if categories is not None:
-            self.categories = [Category._from_data(self._client, category) for category in categories]
+            self.categories = [Category._from_data(None, category) for category in categories]
         if breeds is not None:
-            self.breeds = [Breed._from_data(self._client, breed) for breed in breeds]
+            self.breeds = [Breed._from_data(None, breed) for breed in breeds]
 
     def delete(self) -> Dict[str, str]:
         return self._client.delete_vote(self)
